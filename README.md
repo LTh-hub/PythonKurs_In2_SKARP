@@ -61,3 +61,38 @@ Utifrån fullskaleträning med hel grupp av tränings-bilder, 3500 katter och 42
         - Utvärdera och testa
         - noggrannhet (accruracy), precision (precision), avvikelse (loss)
 
+
+
+# Loggning av epochs iterationer på modell anpassning - visa i web browser
+## **File: steg3-epochs-logg.ipynb**
+Här används hjälpfunktion från TensorBoard att logga resultat på accuracy och loss för träningsdata och valideringsdata vid modellanpassning. Information från logg studeras i web-browser och kan analyseras i realtid - vilket kan vara angenämt vid beräkningskrävande applikationer.
+- Stort sätt samma modell som används i Steg 2
+- Logg ses med Windows CMD:
+    - CMD>>  tensorboard --logdir='log_steg3'
+    - Kör från web browser    -->  http://localhost:6006/ 
+    ![alt text](Cats_and_Dogs/static/image_logg_epochs15.jpg)
+- Visuell visning av CNN modellen i grafisk representation 
+    - Grafisk visning av olika lager
+    - Grafisk visning av filtrens betydelse på de två Conv2D()-lagren
+    ![alt text](Cats_and_Dogs/static/image-two-layers-Conv2D-filter-Cat.jpg)
+    ![alt text](Cats_and_Dogs/static/image-two-layers-Conv2D-filter-Dog.jpg)
+    CNN modellen består av två Conv2d-lager som baseras på 256 st filter vardera, i figurerna visualiseras endast inverkan på modell från 20 filter hos vardera lager - och modell som itererats 15 epochs.
+
+#### import av python moduler
+    - import tensorflow as tf
+    - from tensorflow.keras.datasets import cifar10
+    - from tensorflow.keras.preprocessing.image import ImageDataGenerator
+    - from tensorflow.keras.models import Sequential
+    - from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
+    - from tensorflow.keras.layers import Conv2D, MaxPooling2D
+    - from tensorflow.keras.callbacks import TensorBoard
+    - import pickle
+    - import time
+    - import pydot
+    - from tensorflow.keras.utils import plot_model
+    - from IPython.display import Image
+    - import matplotlib.pyplot as plt
+    - import numpy as np
+
+
+
