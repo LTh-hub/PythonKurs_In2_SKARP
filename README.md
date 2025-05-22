@@ -3,8 +3,9 @@
 ## Pythonprogrammering för AI-utveckling / Egna projektet - del 2
 **Skilj på katter och hundar** från foton ur verkliga livet. Bygga upp en modell som som kan skilja på katter och hundar utifrån fotografier. Träningsdata baseras på foton med de enskilda djuren.  
 
-### Förberredelse av data
-**File: steg1_CatDog.ipynb** - Använder **jupyter notebook** till förberedelser av bilder
+# Förberredelse av data
+Använder **jupyter notebook** till förberedelser av bilder
+## **File: steg1_CatDog.ipynb**
 - Samla in data
 - Tvätta data
 - Dela upp data - data för Träning & Test
@@ -24,8 +25,8 @@
     - import pickle          # för att flusha ut dataström till disk, att representera in-/utdata
 
 
-### Fullskaleförsök bygga modell på hel grupp av träningsdata
-**File: steg2-testa-fooo.ipynb**
+# Fullskaleförsök bygga modell på hel grupp av träningsdata
+## **File: steg2-testa-fooo.ipynb**
 Den här filen används endast som förberedelse inför nästa steg, för att verifiera att Datat är kompatibelt med CNN modell. Att Datat fungerar att läsa från disk och är användbart för modellanpassning.
 - Läser in träningsdata från fil på disk
 - Normerar bildernas gråskalenivå på heltalsvärde 0->255 till flyttalsvärde 0->1
@@ -40,7 +41,6 @@ Den här filen används endast som förberedelse inför nästa steg, för att ve
     - optimizer="adam"
     - metrics=['accuracy']
 - Modellanpassning med funktionen model.fit(X_train, y_train, batch_size=32, epochs=10, validation_split=0.3)
-- 
 #### import av python moduler
     - import pickle
     - import tensorflow as tf
@@ -48,5 +48,16 @@ Den här filen används endast som förberedelse inför nästa steg, för att ve
     - from tensorflow.keras.preprocessing.image import ImageDataGenerator
     - from tensorflow.keras.models import Sequential
     - from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Conv2D, MaxPooling2D
-
+## SLUTSATS
+Utifrån fullskaleträning med hel grupp av tränings-bilder, 3500 katter och 4200 hundar, är det en helhet som tycks fungera
+    1. Import av stor grupp bilder
+    2. Tvättat datat, minskat pixelantal, normerad gråskalenivå
+    3. Delat upp ursprungs datat (80/20) träning / testning 
+       - Här också uppdelning i "model.fit(" som (70/30) träning / validering
+       - Alltså tränings-gruppen á 7700 bilder gruperas som (5390/2310) träning / validering
+     4. Skapat försöks modell; Secventiell Convolution Neutral Network model - CNN
+     5. Försök att träna CNN-modellen resulterade gav fungerande resultat
+     6. Nästa steg:
+        - Utvärdera och testa
+        - noggrannhet (accruracy), precision (precision), avvikelse (loss)
 
