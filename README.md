@@ -25,5 +25,28 @@
 
 
 ### Fullskaleförsök bygga modell på hel grupp av träningsdata
-**File: steg2-testa-fooo.ipynb** 
-- Samla in data
+**File: steg2-testa-fooo.ipynb**
+Den här filen används endast som förberedelse inför nästa steg, för att verifiera att Datat är kompatibelt med CNN modell. Att Datat fungerar att läsa från disk och är användbart för modellanpassning.
+- Läser in träningsdata från fil på disk
+- Normerar bildernas gråskalenivå på heltalsvärde 0->255 till flyttalsvärde 0->1
+- Modellbygge:
+    - Sequential() modell
+    - Använder Conv2D() NN lager
+    - aktiverar med "relu" - för den likriktade linjära enheten
+    - Reducerar spatial dimension med MaxPooling2D()
+    - Avslutningsvis används en sigmoid funktion att aktivera utgångsdatat
+- Sammansättning av modellen inför träning med model.compile(...):
+    - loss="binary_crossentropy",        # Konfigurerar modellen inför träning
+    - optimizer="adam"
+    - metrics=['accuracy']
+- Modellanpassning med funktionen model.fit(X_train, y_train, batch_size=32, epochs=10, validation_split=0.3)
+- 
+#### import av python moduler
+    - import pickle
+    - import tensorflow as tf
+    - from tensorflow.keras.datasets import cifar10
+    - from tensorflow.keras.preprocessing.image import ImageDataGenerator
+    - from tensorflow.keras.models import Sequential
+    - from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Conv2D, MaxPooling2D
+
+
