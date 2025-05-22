@@ -50,14 +50,14 @@ Den här filen används endast som förberedelse inför nästa steg, för att ve
     - from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Conv2D, MaxPooling2D
 ## SLUTSATS
 Utifrån fullskaleträning med hel grupp av tränings-bilder, 3500 katter och 4200 hundar, är det en helhet som tycks fungera
-    1. Import av stor grupp bilder
-    2. Tvättat datat, minskat pixelantal, normerad gråskalenivå
-    3. Delat upp ursprungs datat (80/20) träning / testning 
-       - Här också uppdelning i "model.fit(" som (70/30) träning / validering
-       - Alltså tränings-gruppen á 7700 bilder gruperas som (5390/2310) träning / validering
-     4. Skapat försöks modell; Secventiell Convolution Neutral Network model - CNN
-     5. Försök att träna CNN-modellen resulterade gav fungerande resultat
-     6. Nästa steg:
+- Import av stor grupp bilder
+- Tvättat datat, minskat pixelantal, normerad gråskalenivå
+- Delat upp ursprungs datat (80/20) träning / testning
+    - Här också uppdelning i "model.fit(" som (70/30) träning / validering
+    - Alltså tränings-gruppen á 7700 bilder gruperas som (5390/2310) träning / validering
+    - Skapat försöks modell; Secventiell Convolution Neutral Network model - CNN
+    - Försök att träna CNN-modellen resulterade gav fungerande resultat
+    - Nästa steg:
         - Utvärdera och testa
         - noggrannhet (accruracy), precision (precision), avvikelse (loss)
 
