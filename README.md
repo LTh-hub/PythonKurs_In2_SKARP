@@ -48,7 +48,7 @@ Den här filen används endast som förberedelse inför nästa steg, för att ve
     - from tensorflow.keras.preprocessing.image import ImageDataGenerator
     - from tensorflow.keras.models import Sequential
     - from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten, Conv2D, MaxPooling2D
-## SLUTSATS
+### SLUTSATS
 Utifrån fullskaleträning med hel grupp av tränings-bilder, 3500 katter och 4200 hundar, är det en helhet som tycks fungera
 - Import av stor grupp bilder
 - Tvättat datat, minskat pixelantal, normerad gråskalenivå
