@@ -71,12 +71,16 @@ Här används hjälpfunktion från TensorBoard att logga resultat på accuracy o
     - CMD>>  tensorboard --logdir='log_steg3'
     - Kör från web browser    -->  http://localhost:6006/ 
     ![alt text](Cats_and_Dogs/static/image_logg_epochs15.jpg)
+        Figure: Accuracy och loss från 15 epochs
 - Visuell visning av CNN modellen i grafisk representation 
     - Grafisk visning av olika lager
     - Grafisk visning av filtrens betydelse på de två Conv2D()-lagren
     ![alt text](Cats_and_Dogs/static/image-two-layers-Conv2D-filter-Cat.jpg)
+        Figure: Bild på katt som visualiserar svaret från 20 filter hos de två CNN-lagren.
     ![alt text](Cats_and_Dogs/static/image-two-layers-Conv2D-filter-Dog.jpg)
-    CNN modellen består av två Conv2d-lager som baseras på 256 st filter vardera, i figurerna visualiseras endast inverkan på modell från 20 filter hos vardera lager - och modell som itererats 15 epochs.
+        Figure: Bild på hund och motsvarande svar från 20 filter hos de två CNN-lagren.
+
+CNN modellen består av två Conv2d-lager som baseras på 256 st filter vardera, i figurerna visualiseras endast inverkan på modell från 20 filter hos vardera lager - och modell som itererats 15 epochs.
 
 #### import av python moduler
     - import tensorflow as tf
