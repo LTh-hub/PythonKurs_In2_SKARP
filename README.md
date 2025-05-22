@@ -15,5 +15,15 @@
 - Sparar det tvättade och uppdelade datat på disk:
     - Träningsdata; bildinformation som X_train, klassinformation som y_train
     - Testdata sparas motsvarande som X_test och y_test
+#### import av python moduler
+    - import numpy as np                   # för array matrix operationer
+    - import matplotlib.pyplot as plt      # för att visualisera data
+    - import os                            # för att iterera genom bibliotek med bilder
+    - import cv2             # för att uföra image operationer
+    - import random          # för att placera bilder i slumpmässig kö inför modellanpassning
+    - import pickle          # för att flusha ut dataström till disk, att representera in-/utdata
 
-###  
+
+### Fullskaleförsök bygga modell på hel grupp av träningsdata
+**File: steg2-testa-fooo.ipynb** 
+- Samla in data
