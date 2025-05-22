@@ -100,3 +100,30 @@ CNN modellen består av två Conv2d-lager som baseras på 256 st filter vardera,
 
 
 
+
+# Optimering av Katt och Hund CNN-modell
+## Variera: epochs, antalet Dense- och Convolution-lager samt layer-size
+## **File: steg4-anpassa-model.ipynb**
+Den här filen använder for-satser för att bygga upp modeller där huvudsakligen fyra olika parametrar varieras: epochs, antal lager med Dense- och Conv-funktioner samt storleken på lagerna mätt som antal noder (filter). Det är fortsättning och utveckling av steg 2 och steg 3. På samma sätt som tidigare används hjälpfunktion från TensorBoard att logga resultat på accuracy och loss för tränings- och valideringsdata. Information från logg studeras i web-browser. Detta för att finna **optimala** värden på parametrarna.
+
+- Varierar endast två parametrar samtidigt, analysen blir lätt grötig
+- Undersöker Accuracy och Loss i web-browser på samma sätt som i steg 3
+
+    ![alt text](Cats_and_Dogs/static/Opt3_all.jpg)
+        Figure: Accuracy och loss, varierar antal Dense-layers och antal noder per lager
+
+    ![alt text](Cats_and_Dogs/static/Opt4_optimum.jpg)
+        Figure: Optimalt CNN vid 6 epochs
+
+
+#### import av python moduler 
+    - from tensorflow.keras.models import Sequential
+    - from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
+    - from tensorflow.keras.layers import Conv2D, MaxPooling2D
+    - from tensorflow.keras.callbacks import TensorBoard
+    - import pickle
+    - import time
+
+
+
+
