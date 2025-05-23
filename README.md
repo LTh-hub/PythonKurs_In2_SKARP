@@ -113,8 +113,7 @@ Den här filen använder for-satser för att bygga upp modeller där huvudsaklig
         Figure: Accuracy och loss, varierar antal Dense-layers och antal noder per lager
 
     ![alt text](Cats_and_Dogs/static/Opt4_optimum.jpg)
-        Figure: Optimalt CNN vid 6 epochs
-
+        Figure: Optimal CNN efter 5 stegs epochs
 
 #### import av python moduler 
     - from tensorflow.keras.models import Sequential
@@ -124,6 +123,23 @@ Den här filen använder for-satser för att bygga upp modeller där huvudsaklig
     - import pickle
     - import time
 
+### SLUTSATS
+Utifrån olika CNN modeller där parametrar varierat med avseende på antal lager, antal noder per lager, antal dense-funktioner och antal epochs har en optimal kombination destillierats fram med avseende på CNN modellering.
+
+- **Optimal kombination**:
+    -                 Antal epochs: 5
+    -      Antal convolution lager: 3
+    -            Antal dense lager: 2
+    - Antal noder/filter per lager: 256
+
+- **Resulterande värdering**:
+    - Tränings-datat delades upp i analysen som (70/30) -> (train/validation)
+        - Accuracy (train/valid): (0.90 / 0.88)
+        -     Loss (train/valid): (0.23 / 0.26)
+
+**OBS** Under modelloptimeringen används samma antal noder/filter hos ett och samma CNN. Bättre modell är fullt möjlig genom att variera antalet filter för olika lager. Kutym är att börja med ett lågt antal och öka djupare in i lagren.
+- Nästa steg:
+    - Utvärdera en djup flerlagers CNN modell med lågt antal noder i första lagret, som succesivt ökas med djupet i modellen
 
 
 
