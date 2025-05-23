@@ -148,11 +148,14 @@ Utifrån olika CNN modeller där parametrar varierat med avseende på antal lage
 ## file: **steg5-djup-CNN.ipynb**
 Endast en djup modell med lätt anpassning mot optimalt förhållande. 
 
-    ![alt text](Cats_and_Dogs/static/steg5_CNN_epochs_logg.jpg)
-        Figure: Bild på katt som visualiserar svaret från 20 filter hos de fyra CNN-lagren.
+![alt text](Cats_and_Dogs/static/steg5_CNN_epochs_logg.jpg)
+    Figure: Logg från modellering.
 
-    ![alt text](Cats_and_Dogs/static/steg5_4level-CNN-CatPic.jpg)
-        Figure: Bild på hund och motsvarande svar från 20 filter hos de fyra CNN-lagren.
+![alt text](Cats_and_Dogs/static/steg5_4level-CNN-CatPic.jpg)
+    Figure: Bild på katt som visualiserar svaret från 20 filter hos de fyra CNN-lagren.
+
+![alt text](Cats_and_Dogs/static/steg5_4level-CNN-CatPic.jpg)
+    Figure: Bild på hund och motsvarande svar från 20 filter hos de fyra CNN-lagren.
 
 
 
