@@ -159,11 +159,11 @@ Endast en djup modell med lätt anpassning mot optimalt förhållande.
 
 
 
-# Använd modellen
-## Ökat antal noder med djupet av Convolution-lager
-## file: **steg6-predikt.ipynb**
+# Använda modellen
+## file: **steg6-uppskatta.ipynb**
 Tagits fram två modeller sparade till disk:
-    **steg4_256x3x5-CNN.keras**
-    **steg5-CNN.keras**
+    - **steg4_256x3x5-CNN.keras**
+    - **steg5-CNN.keras**
+
 
 
