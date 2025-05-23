@@ -5,7 +5,7 @@
 
 # Förberredelse av data
 Använder **jupyter notebook** till förberedelser av bilder
-## **File: steg1_CatDog.ipynb**
+## file: **steg1_CatDog.ipynb**
 - Samla in data
 - Tvätta data
 - Dela upp data - data för Träning & Test
@@ -26,7 +26,7 @@ Använder **jupyter notebook** till förberedelser av bilder
 
 
 # Fullskaleförsök bygga modell på hel grupp av träningsdata
-## **File: steg2-testa-fooo.ipynb**
+## file: **steg2-testa-fooo.ipynb**
 Den här filen används endast som förberedelse inför nästa steg, för att verifiera att Datat är kompatibelt med CNN modell. Att Datat fungerar att läsa från disk och är användbart för modellanpassning.
 - Läser in träningsdata från fil på disk
 - Normerar bildernas gråskalenivå på heltalsvärde 0->255 till flyttalsvärde 0->1
@@ -64,7 +64,7 @@ Utifrån fullskaleträning med hel grupp av tränings-bilder, 3500 katter och 42
 
 
 # Loggning av epochs iterationer på modell anpassning - visa i web browser
-## **File: steg3-epochs-logg.ipynb**
+## file: **steg3-epochs-logg.ipynb**
 Här används hjälpfunktion från TensorBoard att logga resultat på accuracy och loss för träningsdata och valideringsdata vid modellanpassning. Information från logg studeras i web-browser och kan analyseras i realtid - vilket kan vara angenämt vid beräkningskrävande applikationer.
 - Stort sätt samma modell som används i Steg 2
 - Logg ses med Windows CMD:
@@ -103,7 +103,7 @@ CNN modellen består av två Conv2d-lager som baseras på 256 st filter vardera,
 
 # Optimering av Katt och Hund CNN-modell
 ## Variera: epochs, antalet Dense- och Convolution-lager samt layer-size
-## **File: steg4-anpassa-model.ipynb**
+## file: **steg4-anpassa-model.ipynb**
 Den här filen använder for-satser för att bygga upp modeller där huvudsakligen fyra olika parametrar varieras: epochs, antal lager med Dense- och Conv-funktioner samt storleken på lagerna mätt som antal noder (filter). Det är fortsättning och utveckling av steg 2 och steg 3. På samma sätt som tidigare används hjälpfunktion från TensorBoard att logga resultat på accuracy och loss för tränings- och valideringsdata. Information från logg studeras i web-browser. Detta för att finna **optimala** värden på parametrarna.
 
 - Varierar endast två parametrar samtidigt, analysen blir lätt grötig
@@ -127,19 +127,25 @@ Den här filen använder for-satser för att bygga upp modeller där huvudsaklig
 Utifrån olika CNN modeller där parametrar varierat med avseende på antal lager, antal noder per lager, antal dense-funktioner och antal epochs har en optimal kombination destillierats fram med avseende på CNN modellering.
 
 - **Optimal kombination**:
-    -                 Antal epochs: 5
-    -      Antal convolution lager: 3
-    -            Antal dense lager: 2
-    - Antal noder/filter per lager: 256
+    - 5 stegs epochs
+    - 3 convolution lager
+    - 2 dense lager
+    - 256 noder/filter per lager
 
 - **Resulterande värdering**:
-    - Tränings-datat delades upp i analysen som (70/30) -> (train/validation)
-        - Accuracy (train/valid): (0.90 / 0.88)
-        -     Loss (train/valid): (0.23 / 0.26)
+    - Tränings-datat är uppdelat i analysen som (70/30) -> (train/validation)
+        - (0.90 / 0.88) (train/valid) Accuracy
+        - (0.23 / 0.26) (train/valid) Loss 
 
 **OBS** Under modelloptimeringen används samma antal noder/filter hos ett och samma CNN. Bättre modell är fullt möjlig genom att variera antalet filter för olika lager. Kutym är att börja med ett lågt antal och öka djupare in i lagren.
 - Nästa steg:
     - Utvärdera en djup flerlagers CNN modell med lågt antal noder i första lagret, som succesivt ökas med djupet i modellen
 
+
+
+# Djup CNN-modell
+## Ökat antal noder med djupet av Convolution-lager
+## file: **steg5-djup-CNN.ipynb**
+Endast en djup modell med lätt anpassning mot optimalt förhållande. 
 
 
