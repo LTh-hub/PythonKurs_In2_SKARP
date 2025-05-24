@@ -160,10 +160,9 @@ Endast en djup modell med anpassning mot optimalt förhållande.
 
 
 # Använda modellen
-## file: **steg6-uppskatta.ipynb**
+## file: **steg6-classify.ipynb**
 Tagits fram två modeller sparade till disk:
-    - **steg4_256x3x5-CNN.keras**
-    - **steg5-CNN.keras**
+    - **step5-CNN-softmax-4_level_conv-15_epoch.keras**
 
 
 
