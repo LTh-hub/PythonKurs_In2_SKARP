@@ -5,7 +5,7 @@
 
 # Förberredelse av data
 Använder **jupyter notebook** till förberedelser av bilder
-## file: **steg1_CatDog.ipynb**
+## file: **./Cats_and_Dogs/steg1_CatDog.ipynb**
 - Samla in data
 - Tvätta data
 - Dela upp data - data för Träning & Test
