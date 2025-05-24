@@ -145,8 +145,8 @@ Utifrån olika CNN modeller där parametrar varierat med avseende på antal lage
 
 # Djup CNN-modell
 ## Ökat antal noder med djupet av Convolution-lager
-## file: **steg5-djup-CNN.ipynb**
-Endast en djup modell med lätt anpassning mot optimalt förhållande. 
+## file: **steg5-djup-CNN-2.ipynb**
+Endast en djup modell med anpassning mot optimalt förhållande. 
 
 ![alt text](Cats_and_Dogs/static/steg5_CNN_epochs_logg.jpg)
     Figure: Logg från modellering.
