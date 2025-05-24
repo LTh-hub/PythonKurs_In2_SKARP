@@ -195,10 +195,22 @@ I förra steget, Steg 5, visades resultat på Accuracy och Loss för olika grupp
 Modellen ger inte lika övertygande numerisk sannolikhet med hundbilder som fallet med kattbilder, det är påfallande stor andel bilder som logiskt modellmässigt sett kommer tolkas som katter. Tidigare Test visade också en Accuracy på ca 85%. Modelerad fördelnings visar här att man kan förvänts erhålla störs prediktionsfel från hundbilder. 
 
 
-# Använda modellen
+
+# Hur modellen används 
 ## file: **steg7-classify.ipynb**
-Har tagits fram modell som sparats till disk:
-    - **step5-CNN-softmax-4_level_conv-15_epoch.keras**
+Den här modellen har anpassats att göra skillnad på katter och hundar (steg 5), kopia är också uppladdad på GitHub. Den här demon som visar hur man kan **använda modellen** ska köras i samma katalog som modellen, så också bilderna på katt och hund i exemplet.
+Modellen har filnamn: **CNN-softmax-4_level_conv-15_epoch.keras**
+
+![alt text](Cats_and_Dogs/static/steg7_classify-cat.jpg)
+    Figure: Bild som visas i ursprunglig upplösning till vänster och i komprimerat tillstånd till höger. Den komprimerade versionen skickas in att klassifiseras av modellen, och uppskattar det som katt till 88.9% sannorlikhet.
+
+![alt text](Cats_and_Dogs/static/steg6_uppskatta-hund-bilder.jpg)
+    Figure: Hund på bild som appliceras på CNN-modellen. Klassificeras som hund med 92.3% sannorlikhet.
+
+### Hur säker är modellen
+Accuracy visades tidigare ligga på ca 85% för hel modell. Vilket speciellt säkert är sant eller kanske t.o.m lite värre för hundbilder. När det då ges ett tal på sannolikhet 92.3% för hund enligt modellen med hundbilden i exemplet, så kan dessa två tal användas till kombinerad standardosäkerhet "root sum of squares (RSS)". Säkerhet 0.85 associeras då till osäkerhet 0.15, pss bildar 0.92 osäkerhetstalet 0.08. Kombinerad osäkerhet kan då uttryckas som roten ur (0.15*0.15 + 0.08*0.08) ~ 0.17  ==> 0.83. Alltså modellmässigt 83% säkerhet att hunden i bilden ovan är en hund. En modell med 85% Accuracy kan endast ge svar till maximalt 85% säkerhet även då sannolikhetsvärdet visar 100%.
+
+
 
 
 
