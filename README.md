@@ -157,11 +157,47 @@ Endast en djup modell med anpassning mot optimalt förhållande.
 ![alt text](Cats_and_Dogs/static/steg5_4level-CNN-CatPic.jpg)
     Figure: Bild på hund och motsvarande svar från 20 filter hos de fyra CNN-lagren.
 
+**Vald kombination**:
+    - 15 stegs epochs
+    - 4 convolution lager
+    - 2 dense lager
+    - [32, 64, 256, 256] noder/filter per lager
+    - 64 batch_size - bidrar till stabil insvängning av modell
+
+- **Resulterande värdering vid modell träning**:
+    - Tränings-datat är uppdelat i analysen som (80/20) -> (train/validation)
+        - (0.99 / 0.90) (train/valid) Accuracy
+        - (0.01 / 0.35) (train/valid) Loss 
+
+- **Resultat Train/Test uppdelade bilder**:
+    - Alla Train-Bilder på modell (7700 st)
+        - 0.9781 Accuracy
+        - 0.0661 Loss 
+    - Alla Test-Bilder på modell (880 st)
+        - 0.8534 Accuracy
+        - 0.4527 Loss 
+
+**OBS** Testet på modellen med Under modelloptimeringen används samma antal noder/filter hos ett och samma CNN. Bättre modell är fullt möjlig genom att variera antalet filter för 
+
+
+
+
+# Visuell modellkontrol
+## file: **steg6-modelTest.ipynb**
+I förra steget, Steg 5, visades resultat på Accuracy och Loss för olika grupper på bilder. Med hjälp av sannolikhetsfunktion visas här hur modellen uppskattar sannolikheten för katt resp hund, baserat på tidigare Test bilder.
+
+![alt text](Cats_and_Dogs/static/steg6_uppskatta-katt-bilder.jpg)
+    Figure: Prediktionsresultat från 400 bilder med katter. Mycket starkt fördelat mot katter, numeriskt medel på 0.96 som katt.
+
+![alt text](Cats_and_Dogs/static/steg6_uppskatta-hund-bilder.jpg)
+    Figure: 480 hund bilder och prediktionsresultat.
+
+Modellen ger inte lika övertygande numerisk sannolikhet med hundbilder som fallet med kattbilder, det är påfallande stor andel bilder som logiskt modellmässigt sett kommer tolkas som katter. Tidigare Test visade också en Accuracy på ca 85%. Modelerad fördelnings visar här att man kan förvänts erhålla störs prediktionsfel från hundbilder. 
 
 
 # Använda modellen
-## file: **steg6-classify.ipynb**
-Tagits fram två modeller sparade till disk:
+## file: **steg7-classify.ipynb**
+Har tagits fram modell som sparats till disk:
     - **step5-CNN-softmax-4_level_conv-15_epoch.keras**
 
 
