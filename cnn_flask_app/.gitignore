@@ -1,0 +1,20 @@
+
+# Ignorera den virtuella miljön
+venv/
+venv_tf219_py310/
+
+# Ignorera eventuella pycache-filer
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorera ev. tillfälliga Jupyter/VSCode/OS-filer
+.ipynb_checkpoints/
+.vscode/
+*.DS_Store
+.DS_Store
+Thumbs.db
+
+# Tensorflow/keras-modeller
+*.h5
+*.keras

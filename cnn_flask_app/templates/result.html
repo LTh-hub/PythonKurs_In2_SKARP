@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultat</title>
+</head>
+<body>
+    <h1>Resultat</h1>
+
+    <h3>Originalbild:</h3>
+    <img src="{{ url_for('static', filename='uploads/' + original_image.split('/')[-1]) }}" height="200">
+
+    <h3>Krympt gråskalebild:</h3>
+    <img src="{{ url_for('static', filename='processed/' + processed_image.split('/')[-1]) }}" height="150">
+
+    <h3>Prediktion:</h3>
+    <p>Modellen tror att detta är en <strong>{{ prediction }}</strong>.</p>
+
+    <h4>Sannolikheter:</h4>
+    På skala 0-100% uppskattar CNN modellen bildinnehållet som:
+    <ul>
+        <li>Katt: {{ '%.2f'|format(prob_cat *100) }}%</li>
+        <li>Hund: {{ '%.2f'|format(prob_dog *100) }}%</li>
+    </ul>
+    
+
+    <br><br>
+    <a href="{{ url_for('home') }}">Tillbaka till startsidan</a>
+</body>
+</html>

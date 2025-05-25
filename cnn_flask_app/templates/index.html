@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hund eller Katt - Startsida</title>
+</head>
+<body>
+    <h1>Välkommen!</h1>
+    <p>Detta program låter dig ladda upp ett foto, därefter uppskattas innehållet som om det föreställer en hund eller katt.</p>
+    <form method="post" action="/predict" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Analysera bilden</button>
+    </form>
+</body>
+</html>

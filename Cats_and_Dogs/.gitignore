@@ -1,0 +1,15 @@
+
+
+
+# Ignorera den virtuella miljön
+venv/
+
+# Ignorera eventuella pycache-filer
+__pycache__/
+*.pyc
+
+# Ignorera ev. tillfälliga Jupyter/VSCode/OS-filer
+.ipynb_checkpoints/
+.vscode/
+*.DS_Store
+

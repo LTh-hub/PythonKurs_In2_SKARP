@@ -1,0 +1,26 @@
+# Vid start
+#
+#
+
+py --version                # Ska visa 3.10 för funktion
+
+
+
+# Om det blir felmeddelande typ "script execution policy", skriv:
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+
+
+py --version
+python -c "import tensorflow as tf; print(tf.__version__)"
+
+
+# Ange full sökväg till Python 3.10 om du har flera versioner:
+C:\Users\larth\AppData\Local\Programs\Python\Python310\python.exe -m venv venv_tf219_py310
+
+# Aktivera miljön:
+.\venv_tf219_py310\Scripts\activate
+
+
+
+#  (venv_tf219_py310)  skall ses före prompten
