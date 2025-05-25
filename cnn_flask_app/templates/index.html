@@ -9,14 +9,18 @@
 {% extends "base.html" %}
 {% block title %}Hund eller Katt - Startsida{% endblock %}
 {% block content %}
-<body>
-    <h1>Välkommen!</h1>
-    <p>Detta program låter dig ladda upp ett foto, därefter uppskattas innehållet som om det föreställer en hund eller katt.</p>
-    <form method="post" action="/predict" enctype="multipart/form-data">
-        <input type="file" name="file" required>
-        <br>
-        <br>
-        <button type="submit">Analysera bilden</button>
-    </form>
-</body>
+<h1>Välkommen!</h1>
+<div style="max-width: 600px; margin: left; border: 1px solid #ccc; padding: 16px;">
+<p>
+    Det här programmet låter dig ladda upp ett foto, därefter 
+    uppskattas innehållet som om det föreställer en hund eller katt.
+</p>
+<br>
+<form method="post" action="/predict" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <br>
+    <br>
+    <button type="submit">Analysera bilden</button>
+</form>
+</div>
 {% endblock %}

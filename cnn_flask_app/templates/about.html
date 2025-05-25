@@ -9,10 +9,69 @@
 {% extends "base.html" %}
 {% block title %}Om programmet{% endblock %}
 {% block content %}
-<body>
-    <h1>About, what we have here!</h1>
-    <p>
-        Detta program låter dig ladda upp ett foto, därefter uppskattas innehållet som om det föreställer en hund eller katt.
-    </p>
-</body>
+<h1>About, vad är detta!</h1>
+<p>
+
+<div style="max-width: 600px; margin: left; border: 1px solid #ccc; padding: 16px;">
+<p>
+    Det här programmet låter dig ladda upp ett foto, därefter uppskattas
+    innehållet som om det föreställer antingen hund eller katt. Resultatet
+    presenteras som Hund eller Katt, samt visar med vilken sannorlikhet
+    modellen baserar dess uppskattning.
+</p>
+</div>
+
+<div style="max-width: 600px; margin: left; border: 1px solid #ccc; padding: 16px;">
+<p>
+    Modellen som sannorlikhetsuppskattning kommer från är en CNN modell, Convolutional
+    Neural Network, som är speciellt lämpliga för sådan här typ av klassificering. Den
+    är uppbyggd av fyra Conv2D lager där antalet filter, noder eller neuroner, varierat
+    som 32, 64, 256 resp sista djupaste lager på 256 noder. Användes 15 epochs för anpassning
+    och konvergens. Modelleringen tränades fram på 7700 bilder med katter och hundar, 
+    ytterligare 880 bilder användes till modelltest.
+    Modellen har uppvisat Accuracy på datat (träna/test) som (0.98, 0.85). I förluster
+    som värdet Loss blev motsvarande (0.066, 0.453).
+    <br>
+    <br>
+    Bildmaterial som använts för att lära modellen hur uppdelning ska utföras mellan hundar
+    och katter har till stor del laddats ned från nätet, och i synnerhet från 
+    <a href="https://www.kaggle.com/">kaggle</a>,
+    som tillhandahåller mycket matnyttigt för Machine Learning.
+    <br>
+    <br>
+    För datahantering, anpassning av kod och NN-utvecklingen har allt modellbaserat förarbete
+    utförts mha <a href="https://jupyter.org/">jupyter notebook</a>. Open source och kraftfulla
+    funktioner från <a href="https://www.tensorflow.org/">TensorFlow</a> som gjort att modellering
+    med neurala nätverk blivit ganska enkelt genomförbart, men som sagt, skit in - skit ut.
+    Versionsmässigt så blev det ganska knepigt att porta modellen från jupyter till VS Code. Varken
+    nya eller gamla versioner var kompatibla. Med Python kernel ver. 3.10.11 och TensorFlow
+    ver. 2.19.0 lyckades konststycket med rull på helheten mot webgränssnittet.
+    <br>
+    <br>
+    Det web baserade gränssnittet har tagits fram via Flask
+    under Python i <a href="https://code.visualstudio.com/">VS Code</a>
+    miljö. Meny systemet har länkats in som
+    <a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">Bootstrap</a>.
+</p>
+</div>
+
+<div style="max-width: 600px; margin: left; border: 1px solid #ccc; padding: 16px;">
+<p>
+    Programmet här är en avslutande inlämningsuppgift i en programmeringskurs påYrkersHögskolan,
+    Göteborg: <strong>Pythonprogrammering för AI-utveckling</strong> / Egna projektet - del 2, åtta veckors 
+    distansutbildning - april-maj 2025.
+    <br>
+    <br>
+        Riktar tack till kursansvarig föreläsare för energirika föreläsninga som inspirerar att leta vidare
+        efter nya programmeringsmässiga inkluderingar på världens frågor. Tack Robin Kamo - kakashidota.
+        Detta har uppskattats stort, möjligheten som kom att glänta på dörren till Pythonvärldens mystiska tillvaro.
+    <br>
+    <br>
+    Lars Thomsson
+    <br>
+    Elev vid IT Högskolan, 31/3-25/5 2025
+</p>
+</div>
+
+</p>
 {% endblock %}
