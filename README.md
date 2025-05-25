@@ -211,6 +211,19 @@ Modellen har filnamn: **CNN-softmax-4_level_conv-15_epoch.keras**
 Accuracy visades tidigare ligga på ca 85% för hel modell. Vilket speciellt säkert är sant eller kanske t.o.m lite värre för hundbilder. När det då ges ett tal på sannolikhet 92.3% för hund enligt modellen med hundbilden i exemplet, så kan dessa två tal användas till kombinerad standardosäkerhet "root sum of squares (RSS)". Säkerhet 0.85 associeras då till osäkerhet 0.15, pss bildar 0.92 osäkerhetstalet 0.08. Kombinerad osäkerhet kan då uttryckas som roten ur (0.15*0.15 + 0.08*0.08) ~ 0.17  ==> 0.83. Alltså modellmässigt 83% säkerhet att hunden i bilden ovan är en hund. En modell med 85% Accuracy kan endast ge svar till maximalt 85% säkerhet även då sannolikhetsvärdet visar 100%.
 
 
+# Vidare användning
+# CNN modell & web interface
+Under katalogen cnn_flask_app på GitHub repo'n ligger ett Python baserat webinterface som tagits fram för enkel körning av CNN-modellen. Bara starta från VS Code "py .\app.py" och navigera med datorns web browser till adress: http://127.0.0.1:5000/
+<br>
+
+Då visas följande bild upp per default
+
+![alt text](cnn_flask_app/static/web-1st.jpg)
+    Figure: Första sida på web gränssnittet där modellen kan demonstreras.
+
+
+
+
 
 
 
