@@ -19,10 +19,13 @@ model = load_model('step5-CNN-softmax-4_level_conv-15_epoch.keras', compile=Fals
 CATEGORIES = ["Cat", "Dog"]
 
 
-
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():

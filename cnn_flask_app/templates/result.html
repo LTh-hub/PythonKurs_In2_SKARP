@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Resultat</title>
-</head>
+<!--
+    result.html
+    This file are called by:
+            app.py
+    It includedes:
+            base.html
+-->
+{% extends "base.html" %}
+{% block title %}Resultat{% endblock %}
+{% block content %}
 <body>
     <h1>Resultat</h1>
 
@@ -26,4 +32,4 @@
     <br><br>
     <a href="{{ url_for('home') }}">Tillbaka till startsidan</a>
 </body>
-</html>
+{% endblock %}
