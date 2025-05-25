@@ -109,11 +109,11 @@ Den här filen använder for-satser för att bygga upp modeller där huvudsaklig
 - Varierar endast två parametrar samtidigt, analysen blir lätt grötig
 - Undersöker Accuracy och Loss i web-browser på samma sätt som i steg 3
 
-    ![alt text](Cats_and_Dogs/static/Opt3_all.jpg)
-        Figure: Accuracy och loss, varierar antal Dense-layers och antal noder per lager
+![alt text](Cats_and_Dogs/static/Opt3_all.jpg)
+<br>Figure: Accuracy och loss, varierar antal Dense-layers och antal noder per lager
 
-    ![alt text](Cats_and_Dogs/static/Opt4_optimum.jpg)
-        Figure: Optimal CNN efter 5 stegs epochs
+![alt text](Cats_and_Dogs/static/Opt4_optimum.jpg)
+<br>Figure: Optimal CNN efter 5 stegs epochs
 
 #### import av python moduler 
     - from tensorflow.keras.models import Sequential
@@ -149,13 +149,13 @@ Utifrån olika CNN modeller där parametrar varierat med avseende på antal lage
 Endast en djup modell med anpassning mot optimalt förhållande. 
 
 ![alt text](Cats_and_Dogs/static/steg5_CNN_epochs_logg.jpg)
-    Figure: Logg från modellering.
+<br>Figure: Logg från modellering.
 
 ![alt text](Cats_and_Dogs/static/steg5_4level-CNN-CatPic.jpg)
-    Figure: Bild på katt som visualiserar svaret från 20 filter hos de fyra CNN-lagren.
+<br>Figure: Bild på katt som visualiserar svaret från 20 filter hos de fyra CNN-lagren.
 
 ![alt text](Cats_and_Dogs/static/steg5_4level-CNN-CatPic.jpg)
-    Figure: Bild på hund och motsvarande svar från 20 filter hos de fyra CNN-lagren.
+<br>Figure: Bild på hund och motsvarande svar från 20 filter hos de fyra CNN-lagren.
 
 **Vald kombination**:
     - 15 stegs epochs
@@ -187,10 +187,10 @@ Endast en djup modell med anpassning mot optimalt förhållande.
 I förra steget, Steg 5, visades resultat på Accuracy och Loss för olika grupper på bilder. Med hjälp av sannolikhetsfunktion visas här hur modellen uppskattar sannolikheten för katt resp hund, baserat på tidigare Test bilder.
 
 ![alt text](Cats_and_Dogs/static/steg6_uppskatta-katt-bilder.jpg)
-    Figure: Prediktionsresultat från 400 bilder med katter. Mycket starkt fördelat mot katter, numeriskt medel på 0.96 som katt.
+<br>Figure: Prediktionsresultat från 400 bilder med katter. Mycket starkt fördelat mot katter, numeriskt medel på 0.96 som katt.
 
 ![alt text](Cats_and_Dogs/static/steg6_uppskatta-hund-bilder.jpg)
-    Figure: 480 hund bilder och prediktionsresultat.
+<br>Figure: 480 hund bilder och prediktionsresultat.
 
 Modellen ger inte lika övertygande numerisk sannolikhet med hundbilder som fallet med kattbilder, det är påfallande stor andel bilder som logiskt modellmässigt sett kommer tolkas som katter. Tidigare Test visade också en Accuracy på ca 85%. Modelerad fördelnings visar här att man kan förvänts erhålla störs prediktionsfel från hundbilder. 
 
@@ -202,13 +202,13 @@ Den här modellen har anpassats att göra skillnad på katter och hundar (steg 5
 Modellen har filnamn: **CNN-softmax-4_level_conv-15_epoch.keras**
 
 ![alt text](Cats_and_Dogs/static/steg7_classify-cat.jpg)
-    Figure: Bild som visas i ursprunglig upplösning till vänster och i komprimerat tillstånd till höger. Den komprimerade versionen skickas in att klassifiseras av modellen, och uppskattar det som katt till 88.9% sannorlikhet.
+<br>Figure: Bild som visas i ursprunglig upplösning till vänster och i komprimerat tillstånd till höger. Den komprimerade versionen skickas in att klassifiseras av modellen, och uppskattar det som katt till 88.9% sannorlikhet.
 
 ![alt text](Cats_and_Dogs/static/steg7_classify-dog.jpg)
-    Figure: Hund på bild som appliceras på CNN-modellen. Klassificeras som hund med 92.3% sannorlikhet.
+<br>Figure: Hund på bild som appliceras på CNN-modellen. Klassificeras som hund med 92.3% sannorlikhet.
 
 ### Hur säker är modellen
-Accuracy visades tidigare ligga på ca 85% för hel modell. Vilket speciellt säkert är sant eller kanske t.o.m lite värre för hundbilder. När det då ges ett tal på sannolikhet 92.3% för hund enligt modellen med hundbilden i exemplet, så kan dessa två tal användas till kombinerad standardosäkerhet "root sum of squares (RSS)". Säkerhet 0.85 associeras då till osäkerhet 0.15, pss bildar 0.92 osäkerhetstalet 0.08. Kombinerad osäkerhet kan då uttryckas som roten ur (0.15*0.15 + 0.08*0.08) ~ 0.17  ==> 0.83. Alltså modellmässigt 83% säkerhet att hunden i bilden ovan är en hund. En modell med 85% Accuracy kan endast ge svar till maximalt 85% säkerhet även då sannolikhetsvärdet visar 100%.
+Accuracy visades tidigare ligga på ca 85% för hel modell. Vilket speciellt säkert är sant eller kanske t.o.m lite värre för hundbilder. När det då ges ett tal på sannolikhet 92.3% för hund enligt modellen med hundbilden i exemplet, så kan dessa två tal användas till kombinerad standardosäkerhet "root sum of squares (RSS)". Säkerhet 0.85 associeras då till osäkerhet 0.15, pss bildar 0.92 osäkerhetstalet 0.08. Kombinerad osäkerhet kan då uttryckas som roten ur (0.15x0.15 + 0.08x0.08) ~ 0.17  ==> 0.83. Alltså modellmässigt 83% säkerhet att hunden i bilden ovan är en hund. En modell med 85% Accuracy kan endast ge svar till maximalt 85% säkerhet även då sannolikhetsvärdet visar 100%.
 
 
 # Vidare användning
@@ -216,10 +216,20 @@ Accuracy visades tidigare ligga på ca 85% för hel modell. Vilket speciellt sä
 Under katalogen cnn_flask_app på GitHub repo'n ligger ett Python baserat webinterface som tagits fram för enkel körning av CNN-modellen. Bara starta från VS Code "py .\app.py" och navigera med datorns web browser till adress: http://127.0.0.1:5000/
 <br>
 
-Då visas följande bild upp per default
+Här ses första sidan på web interfacet som visas per default. Knappen att välja fil används för att läsa in enstaka bilder. När bild är inläst startas uppskattningen mha knappen att Analysera bilden. 
 
 ![alt text](cnn_flask_app/static/web-1st.jpg)
-    Figure: Första sida på web gränssnittet där modellen kan demonstreras.
+<br>Figure: Första sidan på web gränssnittet för att demonstreras CNN-modellen.
+
+
+![alt text](cnn_flask_app/static/web-analys-cat.jpg)
+<br>Figure: Med katt i fokus enligt bild fås respons ovan.
+
+
+![alt text](cnn_flask_app/static/web-analys-dog.jpg)
+<br>Figure: Fokus på hund.
+
+
 
 
 
