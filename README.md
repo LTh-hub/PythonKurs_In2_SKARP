@@ -213,7 +213,9 @@ Accuracy visades tidigare ligga på ca 85% för hel modell. Vilket speciellt sä
 
 # Vidare användning
 # CNN modell & web interface
-Under katalogen cnn_flask_app på GitHub repo'n ligger ett Python baserat webinterface som tagits fram för enkel körning av CNN-modellen. Bara starta från VS Code "py .\app.py" och navigera med datorns web browser till adress: http://127.0.0.1:5000/
+Under katalogen cnn_flask_app här på GitHub repo'n ligger ett Python baserat webinterface som tagits fram för enkel körning av CNN-modellen. Bara starta från VS Code "py .\app.py" och navigera med datorns web browser till adress: http://127.0.0.1:5000/
+Filen requirements.txt informerar beroender som krävs för funktion; fick det att lira med Python kernel ver. 3.10.11 och
+TensorFlow ver. 2.19.0 - förmodligen programstrukturens mest kritiska kombination för kompatibilitet. 
 <br>
 
 Här ses första sidan på web interfacet som visas per default. Knappen att välja fil används för att läsa in enstaka bilder. När bild är inläst startas uppskattningen mha knappen att Analysera bilden. 
@@ -231,6 +233,14 @@ Här ses första sidan på web interfacet som visas per default. Knappen att vä
 
 
 
+
+
+
+
+
+Happy shiny people
+Lars Thomsson
+25 maj 2025
 
 
 
